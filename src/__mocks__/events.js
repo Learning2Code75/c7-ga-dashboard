@@ -1,0 +1,52 @@
+export const eventsData = [
+  {
+    id: "eid1",
+    name: "Reception",
+    location: "RGIT",
+    locationLink: "https://goo.gl/maps/3TvoHJDyQYi5QLmU6",
+    timeOfStart: new Date("2023-12-24").toLocaleString(),
+    realTimeOfStart: new Date("2023-12-24").toLocaleString(),
+    activities: [
+      {
+        id: "e1act1",
+        name: "Selfie booth",
+        responseType: "selfie",
+        afterMessage: "Make sure to share it with others!",
+        startTime: new Date("2023-12-24").toLocaleString(),
+        realTimeOfStart: new Date("2023-12-24").toLocaleString(),
+        numResponded: "2",
+        whoResponded: ["uid1", "uid2"],
+      },
+      {
+        id: "e1act2",
+        name: "Food counter",
+        responseType: "",
+        afterMessage: "Enjoy your meal!",
+        startTime: new Date("2023-12-24").toLocaleString(),
+        realTimeOfStart: new Date("2023-12-24").toLocaleString(),
+        numResponded: "2",
+        whoResponded: ["uid1", "uid2"],
+      },
+    ],
+  },
+  {
+    id: "eid2",
+    name: "Wedding",
+    location: "RGIT",
+    locationLink: "https://goo.gl/maps/3TvoHJDyQYi5QLmU6",
+    timeOfStart: new Date("2023-12-24").toLocaleString(),
+    realTimeOfStart: new Date("2023-12-24").toLocaleString(),
+    activities: [
+      {
+        id: "e2act1",
+        name: "Pooja",
+        responseType: "",
+        afterMessage: "Pray!",
+        startTime: new Date("2023-12-24").toLocaleString(),
+        realTimeOfStart: new Date("2023-12-24").toLocaleString(),
+        numResponded: "2",
+        whoResponded: ["uid1", "uid2"],
+      },
+    ],
+  },
+];
