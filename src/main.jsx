@@ -26,7 +26,7 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/c7-ga-dashboard/",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [

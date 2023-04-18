@@ -17,7 +17,7 @@ const Home = () => {
           backgroundColor: "rgb(0,0,0)",
           opacity: "75%",
         }}
-        src="./imgs/home.jpg"
+        src="../imgs/home.jpg"
         alt="image"
         height="300"
         width="350"
