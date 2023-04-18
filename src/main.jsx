@@ -26,32 +26,32 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: "/c7-ga-dashboard/",
+    path: "/c7-ga-dashboard",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "/c7-ga-dashboard/",
         element: <Home />,
       },
       {
-        path: "contacts/:contactId",
+        path: "/c7-ga-dashboard/contacts/:contactId",
         element: <Contact />,
       },
       {
-        path: "posts",
+        path: "/c7-ga-dashboard/posts",
         element: <Posts />,
       },
       {
-        path: "events",
+        path: "/c7-ga-dashboard/events",
         element: <Events />,
       },
       {
-        path: "paths",
+        path: "/c7-ga-dashboard/paths",
         element: <Paths />,
       },
       {
-        path: "users",
+        path: "/c7-ga-dashboard/users",
         element: <Users />,
       },
     ],
