@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Root from "./routes/root";
@@ -58,12 +57,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
-
 const persistConfig = {
   key: "persist-key",
   storage,
@@ -80,10 +73,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <QueryClientProvider client={queryClient}>
-          <ThemeProvider theme={theme}>
-            <RouterProvider router={router} />
-            {/* <ReactQueryDevtools /> */}
-          </ThemeProvider>
+          <RouterProvider router={router} />
+          {/* <ReactQueryDevtools /> */}
         </QueryClientProvider>
       </PersistGate>
     </Provider>

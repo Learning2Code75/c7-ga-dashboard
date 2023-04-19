@@ -15,12 +15,13 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  useTheme,
 } from "@mui/material";
 import { BsFillCalendarEventFill } from "react-icons/bs";
 import { RiRoadMapFill } from "react-icons/ri";
 import { FaUser } from "react-icons/fa";
+import ToggleColorMode from "./ToggleColorMode";
 const drawerBleeding = 56;
-
 const Root = styled("div")(({ theme }) => ({
   height: "100%",
   backgroundColor:
@@ -45,8 +46,8 @@ const Puller = styled(Box)(({ theme }) => ({
 
 function SwipeableEdgeDrawer(props) {
   const { window } = props;
+  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
@@ -75,11 +76,12 @@ function SwipeableEdgeDrawer(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            background: "rgba(0,0,0,.85)",
+            background: theme.palette.primary.contrastText,
             height: "3.4rem",
           }}
         >
           <Button onClick={toggleDrawer(true)}>Dashboard Features</Button>
+          <ToggleColorMode />
         </div>
       </Box>
       <SwipeableDrawer
